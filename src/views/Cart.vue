@@ -10,6 +10,10 @@
   </div>
   </div>
   <CartList :cartItems="cartFunction" />
+
+  <div class="footer">
+      <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_lab2.git"> Creative Lab 3.</a></p><br>
+  </div>
 </div>
 </template>
 
@@ -41,8 +45,22 @@ export default {
   color: white;
 }
 
+.footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100;
+    font-size: 20px;
+    text-align: center;
+    background-color: #11161c;
+    color: white;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
 h1 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .emptyMessage {

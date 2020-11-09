@@ -122,7 +122,7 @@ let mock = [{
     id: 13,
     name: "you broke me first",
     FavStatus: '🤍',
-    artist: "tate McRate",
+    artist: "tate McRae",
     genre: "Pop",
     image: "tate.png",
     inCart: false,
@@ -198,7 +198,57 @@ let mock = [{
     image: "holy.png",
     inCart: false,
     youtube: 'https://www.youtube.com/watch?v=pvPsJFRGleA'
-  }
+},
+  {
+    id: 21,
+    name: "Watermelon Sugar",
+    FavStatus: '🤍',
+    artist: "Harry Styles",
+    genre: "Pop",
+    image: "golden.png",
+    inCart: false,
+    youtube: 'https://www.youtube.com/watch?v=E07s5ZYygMg'
+},
+  {
+    id: 22,
+    name: "Circles",
+    FavStatus: '🤍',
+    artist: "Post Malone",
+    genre: "Pop",
+    image: "circles.png",
+    inCart: false,
+    youtube: 'https://www.youtube.com/watch?v=wXhTHyIgQ_U'
+},
+  {
+    id: 23,
+    name: "Whats Poppin",
+    FavStatus: '🤍',
+    artist: "Jack Harlow",
+    genre: "Rap",
+    image: "jack.png",
+    inCart: false,
+    youtube: 'https://www.youtube.com/watch?v=HIwAI05Y1fU'
+},
+  {
+    id: 24,
+    name: "King & Queens",
+    FavStatus: '🤍',
+    artist: "Ava Max",
+    genre: "Pop",
+    image: "king.png",
+    inCart: false,
+    youtube: 'https://www.youtube.com/watch?v=jH1RNk8954Q'
+},
+  {
+    id: 25,
+    name: "ily",
+    FavStatus: '🤍',
+    artist: "Surf Mesa",
+    genre: "Pop",
+    image: "ily.png",
+    inCart: false,
+    youtube: 'https://www.youtube.com/watch?v=89degLrNZM8'
+},
 ]
 
 export default mock;

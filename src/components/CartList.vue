@@ -13,7 +13,7 @@
       <div class="price">
         <button class="auto">
             <a :href="product.youtube" target="_blank">Listen</a></button>
-        <button class="auto right-button" @click = "removeProduct(product)">🆇</button>
+        <button class="auto right-button" @click = "removeProduct(product)">Remove</button>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@ button {
   text-decoration: none;
   width: 50%;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   border-radius: 0px 0px 0px 15px;
@@ -151,9 +151,9 @@ button {
     color: white;
     width: 50%;
     border: none;
-    font-size: 27px;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-weight: 700;
     border-radius: 0px 0px 15px 0px;
 }
 

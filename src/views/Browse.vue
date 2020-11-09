@@ -1,4 +1,5 @@
 <template>
+<div class="browse">
 <div class="wrapper">
   <div class="products">
     <div class="product" v-for="genre in $root.$data.genres" :key="genre.id">
@@ -13,6 +14,10 @@
 
   </div>
    <ProductList :products="products" />
+</div>
+<div class="footer">
+    <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_lab2.git"> Creative Lab 3.</a></p><br>
+</div>
 </div>
 </template>
 
@@ -51,9 +56,33 @@ export default {
   flex-wrap: wrap;
 }
 
+.browse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100;
+    font-size: 20px;
+    text-align: center;
+    background-color: #11161c;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
 .separate {
-    height: 200px;
+    height: 300px;
     width: auto;
+    margin-bottom: 100px;
 }
 
 .products {
@@ -93,7 +122,7 @@ export default {
 }
 
 .info h1 {
-  font-size: 21px;
+    font-size: 35px;
 }
 
 .p {

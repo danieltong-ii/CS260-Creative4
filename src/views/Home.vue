@@ -1,12 +1,12 @@
 <template>
 <div>
 <div class="title">
-  <h1> Top 20 in USA Today 🇺🇸 </h1>
+  <h1> Top 25 Songs in the USA Today 🇺🇸 </h1>
 </div>
   <div class="wrapper">
     <div class="search">
       <form class="pure-form">
-        <input placeholder="  🔎 Search..." v-model="searchText" />
+        <input placeholder="  🔎   Search" v-model="searchText" />
       </form>
     </div>
   </div>
