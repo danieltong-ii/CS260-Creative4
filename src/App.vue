@@ -1,32 +1,133 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div id="app">
+  <div id="menu">
+    <div id="brand">
+      <router-link to="/">
+        <img src="/images/logo.png">
+      </router-link>
     </div>
-    <router-view/>
+    <div id="side">
+        <router-link to="/">
+          <div class="menu-item browse">
+            <p>Home</p>
+          </div>
+        </router-link>
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <p>Genres</p>
+        </div>
+      </router-link>
+      <router-link to="/cart">
+        <div class="menu-item">
+          <p>Saved Songs</p>
+        </div>
+      </router-link>
+    </div>
   </div>
+  <router-view />
+</div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  props: {
+  },
+  data() {
+    return {
+      numberOfItems_: '',
+    }
+  },
+computed: {
+    numberOfItems () {
+        return this.$root.$data.cart.length;
+    }
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+a:link {
+  text-decoration: none;
+  color: white;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+a:visited {
+  text-decoration: none;
+  color: white;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+a:hover {
+  text-decoration: none;
+  color: black;
 }
+
+a:active {
+  text-decoration: underline;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+body {
+  margin: 100px 100px 0px 100px;
+  background-color: #11161c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-template-areas: "none brand side";
+  margin-bottom: 50px;
+  color: white;
+}
+
+#menu a {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+#brand {
+  grid-area: brand;
+  display: flex;
+  justify-content: center;
+}
+
+#brand img {
+  height: 300px;
+}
+
+#side {
+  grid-area: side;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#side img {
+  width: 50px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item p {
+  margin: 0px;
+}
+
+.browse {
+  margin-right: 50px;
+}
+
 </style>
