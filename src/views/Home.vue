@@ -14,7 +14,7 @@
   <ProductList :products="products" />
 
   <div class="footer">
-      <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_lab2.git"> Creative Lab 3.</a></p><br>
+      <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_Creative3.git"> Creative Lab 3.</a></p><br>
   </div>
 
 </div>
