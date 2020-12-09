@@ -6,7 +6,7 @@
   <div class="wrapper">
 
   <div class="emptyMessage">
-    <p v-show="this.$root.$data.cart.length === 0">You have no songs saved yet. </p>
+    <p v-show="this.$root.$data.cart.length === 0">You have no songs saved yet. Your cart will be cleared when you leave this site. </p>
   </div>
   </div>
   <CartList :cartItems="cartFunction" />

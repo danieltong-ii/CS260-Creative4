@@ -222,6 +222,7 @@ button {
     margin-right: 50px;
     font-size: 20px;
     font-weight: bold;
+  border-radius: 13px 13px 13px 13px;
 }
 
 /* Uploaded images */
@@ -236,8 +237,9 @@ button {
 
 /* Suggestions */
 .suggestions {
-    width: 200px;
+    width: 215px;
     border: 1px solid #ccc;
+
     background: white;
 }
 
