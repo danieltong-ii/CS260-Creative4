@@ -1,6 +1,7 @@
 <template>
 <div>
     <h1>Add a Song to Our Library</h1>
+    <h2>Our website is a collaborative effort to track the most popular songs of today. Feel free to contribute by adding, editing, and removing songs!</h2>
     <div class="heading">
         <div class="circle">1</div>
         <h2>Add a Song (Upload an Album Cover)</h2>
@@ -22,7 +23,7 @@
 
     <div class="heading">
         <div class="circle">2</div>
-        <h2>Edit/Delete an Item</h2>
+        <h2>Edit or Delete a Song</h2>
     </div>
     <div class="edit">
         <div class="form">
@@ -42,8 +43,11 @@
         <div class="actions" v-if="findItem">
             <button @click="deleteItem(findItem)">Delete Item</button>
             <button @click="editItem(findItem)">Edit Title</button>
-            <button @click="editItemDescription(findItem)">Edit Artist</button>
+            <button @click="editItem(findItem)">Edit Artist</button>
         </div>
+    </div>
+    <div class="footer">
+        <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_Creative4.git"> Creative Lab 4.</a></p><br>
     </div>
 </div>
 </template>
@@ -120,17 +124,6 @@ export default {
             try {
                 await axios.put("/api/items/" + item._id, {
                     name: this.findItem.name,
-                });
-                this.findItem = null;
-                this.getItems();
-                return true;
-            } catch (error) {
-                console.log(error);
-            }
-        },
-        async editItemDescription(item) {
-            try {
-                await axios.put("/api/items/" + item._id, {
                     artist: this.findItem.artist,
                 });
                 this.findItem = null;
@@ -140,6 +133,18 @@ export default {
                 console.log(error);
             }
         },
+        // async editItemDescription(item) {
+        //     try {
+        //         await axios.put("/api/items/" + item._id, {
+        //             artist: this.findItem.artist,
+        //         });
+        //         this.findItem = null;
+        //         this.getItems();
+        //         return true;
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+        // },
     }
 }
 </script>
@@ -174,6 +179,11 @@ export default {
 
 h1 {
     color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
 }
 
 .heading h2 {

@@ -321,10 +321,8 @@ app.delete('/api/items/:id', async (req, res) => {
 app.put('/api/items/:id', async (req, res) => {
     try {
         let items = await Song.findOne({_id: req.params.id});
-        items.name = req.body.name;
-        if (req.body.artist !== null) {
             items.artist = req.body.artist;
-        }
+            items.name = req.body.name;
         items.save();
     } catch (error) {
         console.log(error);

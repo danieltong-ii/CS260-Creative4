@@ -1,7 +1,10 @@
 <template>
 <div>
 <div class="title">
-  <h1> Top 25 Songs in the USA Today 🇺🇸 </h1>
+  <h1> Top Songs in the USA Today 🇺🇸 </h1>
+</div>
+<div class="title">
+  <h2> If you have any song suggestions, feel free to add them in the Add Song page. Please refresh the site to see changes.</h2>
 </div>
   <div class="wrapper">
     <div class="search">
@@ -14,7 +17,7 @@
   <ProductList :products="products" />
 
   <div class="footer">
-      <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_Creative3.git"> Creative Lab 3.</a></p><br>
+      <p class = "small-font">Copyright 2020 · Daniel Tong · You can find my gitrepo here: <a href="https://github.com/danieltong-ii/CS260_Creative4.git"> Creative Lab 4.</a></p><br>
   </div>
 
 </div>
@@ -81,6 +84,10 @@ export default {
 
 h1 {
     font-size: 35px;
+}
+
+h2 {
+    font-size: 20px;
 }
 
 form {
