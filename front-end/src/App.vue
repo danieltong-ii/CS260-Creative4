@@ -17,6 +17,11 @@
           <p>Genres</p>
         </div>
       </router-link>
+      <router-link to="/add">
+        <div class="menu-item browse">
+          <p>Add Song</p>
+        </div>
+      </router-link>
       <router-link to="/cart">
         <div class="menu-item">
           <p>Saved Songs</p>

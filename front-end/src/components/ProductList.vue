@@ -2,7 +2,7 @@
 <div class="wrapper">
 
   <div class="products">
-    <div class="product" v-for="product in products" :key="product.id">
+    <div class="product" v-for="product in products" :key="product._id">
     <div class="image">
       <img :src="'/images/products/'+product.image">
     </div>

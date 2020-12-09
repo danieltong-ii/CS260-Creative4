@@ -2,7 +2,7 @@
 <div class="wrapper">
 
   <div class="products">
-    <div class="product" v-for="product in $root.$data.cart" :key="product.id">
+    <div class="product" v-for="product in $root.$data.cart" :key="product._id">
     <div class="image">
       <img :src="'/images/products/'+product.image">
     </div>
@@ -34,7 +34,7 @@ export default {
   },
 methods: {
     removeProduct(product) {
-    console.log(product.id)
+    console.log(product._id)
         console.log(this.$root.$data.cart.indexOf(product));
         this.cartPos = this.$root.$data.cart.indexOf(product);
         this.$root.$data.cart.splice(this.cartPos,1);
